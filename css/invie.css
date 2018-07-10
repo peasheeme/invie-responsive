@@ -1,0 +1,290 @@
+  body {
+  font-family: 'Allerta', sans-serif;
+  margin: 0;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th {
+    background-color: #273b47;
+    color: white;
+    padding: 10px 20px;
+    text-align: left;
+  }
+
+  td {
+    padding: 20px;
+  }
+
+  table, td, th {
+    border:  1px solid #273b47;
+    border-collapse: collapse;
+  }
+
+  input, textarea {
+    outline: 0;
+  }
+
+  input:focus, textarea:focus{
+    background-color: lightgray;
+  }
+
+  .contenedor {
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+  }
+
+  .background {
+    background-image: url("../images/background.png");
+    background-size: cover;
+  }
+
+  .titulo {
+  	font-size: 70px;
+  	font-family: 'Montserrat', sans-serif;
+  	margin-bottom: 0;
+  	margin-top: 70px;
+  }
+
+  .title-a {
+  	font-size: 24px;
+  	font-family: 'Montserrat', sans-serif;
+  	margin-top: 0;
+  }
+
+  .titulo span {
+    text-decoration: underline;
+  }
+
+  .guitarras h2 {
+  	font-size: 35px;
+  }
+
+  .title-b {
+  	font-size: 50px;
+  	margin-bottom: 20px;
+  }
+
+  .portada {
+  	color: white;
+  	padding: 20px;
+    height: 500px;
+   }
+  
+  .menu {
+  	font-size: 24px;
+  	display: inline-block;
+  	position: absolute;
+  	right: 0;
+  }
+
+  .menu li {
+  	display: inline-block;
+  	margin-left: 30px;
+  }
+
+  .menu li:before {
+  	content: '|';
+  	font-size: 50px;
+  	line-height: 20px;
+    color: white;
+  }
+
+  .menu a {
+    color: white;
+    text-decoration: none; 
+  }
+
+  .logotipo {
+  	display: inline-block;
+    margin-left: 0;
+  }
+
+  .portada button {
+  	margin-bottom: 70px;
+  }
+  
+  .derecha {
+  	float: right;
+  	position: relative;
+  	top: -127px;
+  }
+
+  .izquierda {
+  	float: left;
+  	position: relative;
+  }
+
+  .guitarras {
+    color: #1F313C;
+    margin-bottom: 60px;
+   }
+
+  .guitarra {
+  	padding: 10px;
+  	margin: 10px 10px 40px 10px ;
+  /*overflow: hidden;*/
+  	border: 1px solid #1F313C;
+  	border-radius: 8px;
+  }
+
+  .guitarra.b {
+  height: 190px;
+  }
+
+  .guitarra ol {
+  	padding: 0;
+  }
+
+  .contenedor-guitarra-a {
+	padding-left: 20px;
+  }
+
+  .contenedor-guitarra-b {
+  	margin-left: 370px;
+    position: relative;
+    bottom: 90px;
+  }
+
+  .header {
+  	position: relative;
+  }
+
+  .button {
+  	border-radius: 8px;
+  	background-color: #fd324e;
+  	color: white;
+  	border: none;
+  	padding: 7px 12px;
+    cursor: pointer;
+    font-size: 18px;
+    background: linear-gradient(to left, #fe344e , #ff7250);
+    text-decoration: none;
+  }
+
+  .footer {
+  	background: #273b47;
+    padding: 50px 10px;
+  }
+
+   .contacto {
+    display: flex;
+    width: 300px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .contacto img {
+  	display: block;
+  }
+
+  .contacto strong {
+  	display: block;
+  }
+
+  .contacto a {
+  	color: white;
+  	text-decoration: none;
+  	margin: 10px 10px 10px 0;
+   }
+
+  .footer .contenedor {
+  	display: flex;
+  	justify-content: space-between;
+  }
+
+  .formulario {
+  	display: flex;
+  	width: 500px;
+  	color: white;
+  }
+
+  .col1 , .col2 {
+  	display: flex;
+  	flex-direction: column;
+  }
+
+  .col1 {
+  	margin-right: 15px;
+  }
+
+  .col2 {
+  	align-items: flex-start;
+  }
+
+  .col2 .button {
+    margin-top: 15px;
+  }
+
+  .intereses label {
+  	font-size: 18px;
+  }
+
+  .formulario label, .sexo , .intereses {
+  	margin-bottom: 10px;
+  }
+
+  .sexo {
+  	margin-top: 10px;
+  }
+
+  .tabla {
+  margin: 50px 0;
+  }
+
+  /*--------------MEDIA QUERIE--------------*/
+  @media screen and (max-width:800px) {
+
+   /* .contenedor {
+      width: auto;
+    max-width: 800px;
+    }*/
+
+    .titulo {
+      font-size: 45px;
+      margin-top: 30px;
+    }
+    .titulo-a {
+      font-size: 18px;
+    }
+    .portada {
+      height: auto;
+    }
+
+    .portada .button {
+      margin-bottom: 30px;
+      display: inline-block;
+    }
+
+    /*guitarras*/
+    .guitarras {
+      text-align: center;
+    }
+    .izquierda, .derecha {
+      float: none;
+      position: static;
+    }
+
+    .title-b {
+      margin: 0;
+    }
+    .guitarra li {
+      list-style: none;
+    }
+    .guitarra.b {
+      height: auto;
+    }
+    .contenedor-guitarra-b {
+      position: static;
+      margin: 0;
+    }
+
+  }
+
+
+
+
+  
