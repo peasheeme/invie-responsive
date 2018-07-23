@@ -1,3 +1,58 @@
+  @font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?j2b4fx');
+  src:  url('../fonts/icomoon.eot?j2b4fx#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?j2b4fx') format('truetype'),
+    url('../fonts/icomoon.woff?j2b4fx') format('woff'),
+    url('../fonts/icomoon.svg?j2b4fx#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-mail:before {
+  content: "\e900";
+}
+.icon-phone:before {
+  content: "\e901";
+}
+.icon-telephone:before {
+  content: "\e901";
+}
+.icon-contact:before {
+  content: "\e901";
+}
+.icon-support:before {
+  content: "\e901";
+}
+.icon-call:before {
+  content: "\e901";
+}
+.icon-menu:before {
+  content: "\e902";
+}
+.icon-close:before {
+  content: "\e903";
+}
+
+
+
+
   body {
   font-family: 'Allerta', sans-serif;
   margin: 0;
@@ -238,6 +293,38 @@
   margin: 50px 0;
   }
 
+  .burguer-button {
+    width: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    height: 40px;
+    background: #395667;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 3; /* ACOMODANDO ARRIBA DEL z index 2*/
+  }
+
+  video {
+    width: 100%;
+  }
+  .video-responsive-contenedor {
+    position: relative;
+    padding-top: 56.25%;
+  }
+  .video-responsive-src {
+    position: absolute;
+    left: 0;  
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+
   /*--------------MEDIA QUERIE--------------*/
   @media screen and (max-width:800px) {
 
@@ -361,6 +448,32 @@
 
   @media screen and (max-width: 500px){
   /*-------------PORTADA-----*/
+  .portada .contenedor{
+    position: static; /* quitando la posicion relativa por default a posicion statica basica para poder posicionar 
+    totalmente la posicion absoluta del menu*/
+  }
+    .menu {
+      background: rgba(255, 60, 88, .8);
+      position: absolute; /* Acomoda el contenido a la posicion absoluta o estatica mas cercana*/
+      left: -100%; /* Mueve los elementos hacia la izquierda*/
+      width: 100%; /* tamaño declarado para que se mueva todo el elemento hacia la izquierda*/
+      top: 0;
+      z-index: 2; /* Envia los elementos hacia enfrente*/
+      bottom: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      transition: .3s; /* queremos que se mueva el elemento en .3segundos o 300 milisegundos*/
+    }
+
+    .menu.active { /* cambia la propiedad de -100% a 0 para que el menu se mueva*/
+      left: 0; 
+
+    }
+    .menu ul {
+      flex: 1; /* ese elemento ocupe todo el ancho disponible como margin 0*/
+    }
+
     .menu li {
         display: block;
         margin:0;
